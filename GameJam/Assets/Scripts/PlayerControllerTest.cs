@@ -11,6 +11,7 @@ public class PlayerControllerTest : MonoBehaviour
     public Mesh cube;
     public Mesh sphere;
     public Mesh capsule;
+    public Mesh ico;
 
 
     public float changeLaneSpeed = 10f;
@@ -27,6 +28,7 @@ public class PlayerControllerTest : MonoBehaviour
         myCharacterController = GetComponent<CharacterController>();
 
         currentShape = GetComponent<MeshFilter>();
+
         
     }
 
@@ -97,6 +99,16 @@ public class PlayerControllerTest : MonoBehaviour
             Instantiate(capsule, vectortest, Quaternion.identity);
             Destroy(this.gameObject);*/
             GetComponent<MeshFilter>().mesh = capsule;
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            /*
+            vectortest = new Vector3(transform.position.x, 1.5f, transform.position.z);
+            Instantiate(capsule, vectortest, Quaternion.identity);
+            Destroy(this.gameObject);*/
+            GetComponent<MeshFilter>().mesh = ico;
 
         }
     }
