@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControllerTest : MonoBehaviour
 {
@@ -97,3 +98,15 @@ public class PlayerControllerTest : MonoBehaviour
 
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(GetComponent<MeshFilter>().mesh.name == other.GetComponent<MeshFilter>().mesh.name)
+        {
+            Destroy(other.gameObject);
+        } else
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+}

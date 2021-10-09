@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeadZoneScript : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class DeadZoneScript : MonoBehaviour
         if (other.gameObject.tag == "enemyCub" || other.gameObject.tag == "enemySph" || other.gameObject.tag == "enemyCap")
         {
             Destroy(other.gameObject);
+            SceneManager.LoadScene(0);
         }
     }
 }
