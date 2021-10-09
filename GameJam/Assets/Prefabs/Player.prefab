@@ -126,6 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d758650db408a469282e0e263ee891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cube: {fileID: 2107863455913177661}
+  sphere: {fileID: 774408928912074916, guid: 08e0d0ecb4c57c14491424d121a34e5a, type: 3}
+  capsule: {fileID: 3490379060400143295, guid: 9cdfc871de335f54698ebefe82602a6c, type: 3}
   changeLaneSpeed: 15
   laneWidth: 2
 --- !u!143 &2107863455913177637

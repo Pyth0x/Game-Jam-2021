@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerControllerTest : MonoBehaviour
 {
+    Vector3 vectortest;
+
+    public Mesh cube;
+    public Mesh sphere;
+    public Mesh capsule;
+
 
     public float changeLaneSpeed = 10f;
     public float laneWidth = 1.5f;
@@ -11,16 +17,21 @@ public class PlayerControllerTest : MonoBehaviour
 
     private CharacterController myCharacterController;
     private Vector3 velocity;
+    private MeshFilter currentShape;
+    private Vector3 currentPos;
 
     private void Start()
     {
         myCharacterController = GetComponent<CharacterController>();
-        lane = 0;
+
+        currentShape = GetComponent<MeshFilter>();
+        
     }
 
     private void Update()
     {
         Move();
+        ChangeShape();
     }
 
     private void Move()
@@ -56,8 +67,39 @@ public class PlayerControllerTest : MonoBehaviour
         myCharacterController.Move(moveAmount);
     }
 
-    void changeShape(int shape)
+    void ChangeShape()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            /*
+            vectortest = new Vector3(transform.position.x, 1, transform.position.z);
+            Destroy(this.gameObject);
+            Instantiate(cube,vectortest, Quaternion.identity);*/
+            GetComponent<MeshFilter>().mesh = cube;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            /*
+            vectortest = new Vector3(transform.position.x, 1, transform.position.z);
+            Destroy(this.gameObject);
+            Instantiate(sphere,vectortest , Quaternion.identity);*/
+            GetComponent<MeshFilter>().mesh = sphere;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            /*
+            vectortest = new Vector3(transform.position.x, 1.5f, transform.position.z);
+            Instantiate(capsule, vectortest, Quaternion.identity);
+            Destroy(this.gameObject);*/
+            GetComponent<MeshFilter>().mesh = capsule;
+
+        }
+    }
+
+    void shape()
+    {
+
     }
 }
