@@ -34,6 +34,7 @@ public class PlayerControllerTest : MonoBehaviour
     {
         Move();
         ChangeShape();
+
     }
 
     private void Move()
@@ -112,4 +113,5 @@ public class PlayerControllerTest : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
+
 }
