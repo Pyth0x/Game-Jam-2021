@@ -6,7 +6,7 @@ public class SpawnPointScript : MonoBehaviour
 {
     public GameObject[] enemies;
     public float enemySpawnTime = 0.1f;
-    int[] spawnPoints = { -2, 0, 2 };
+    int[] spawnPoints = { -3, 0, 3 };
     void Start()
     {
         InvokeRepeating("spawnEnemies", 0, enemySpawnTime);
