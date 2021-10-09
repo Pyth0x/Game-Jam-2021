@@ -98,8 +98,11 @@ public class PlayerControllerTest : MonoBehaviour
         }
     }
 
-    void shape()
+    private void OnTriggerEnter(Collider other)
     {
-
+        if(GetComponent<MeshFilter>().mesh.name == other.GetComponent<MeshFilter>().mesh.name)
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

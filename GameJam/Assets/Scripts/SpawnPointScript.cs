@@ -10,7 +10,6 @@ public class SpawnPointScript : MonoBehaviour
     void Start()
     {
         InvokeRepeating("spawnEnemies", 0, enemySpawnTime);
-        InvokeRepeating("spawnEnemies", 0.15f, enemySpawnTime);
     }
 
 
