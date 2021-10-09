@@ -97,9 +97,4 @@ public class PlayerControllerTest : MonoBehaviour
 
         }
     }
-
-    void shape()
-    {
-
-    }
 }
