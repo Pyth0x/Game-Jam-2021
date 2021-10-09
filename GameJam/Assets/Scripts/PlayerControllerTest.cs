@@ -7,6 +7,7 @@ public class PlayerControllerTest : MonoBehaviour
 {
     Vector3 vectortest;
 
+    public ScoreScript scoreScript;
     public Mesh cube;
     public Mesh sphere;
     public Mesh capsule;
@@ -24,7 +25,7 @@ public class PlayerControllerTest : MonoBehaviour
     private void Start()
     {
         myCharacterController = GetComponent<CharacterController>();
-
+        
         currentShape = GetComponent<MeshFilter>();
         
     }
@@ -33,6 +34,7 @@ public class PlayerControllerTest : MonoBehaviour
     {
         Move();
         ChangeShape();
+        
     }
 
     private void Move()
@@ -103,7 +105,9 @@ public class PlayerControllerTest : MonoBehaviour
     {
         if(GetComponent<MeshFilter>().mesh.name == other.GetComponent<MeshFilter>().mesh.name)
         {
+            
             Destroy(other.gameObject);
+            scoreScript.UpdateScore();
         } else
         {
             SceneManager.LoadScene(0);
