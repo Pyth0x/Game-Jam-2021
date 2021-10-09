@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.ProBuilder;
+
 
 public class PlayerControllerTest : MonoBehaviour
 {
@@ -11,7 +14,7 @@ public class PlayerControllerTest : MonoBehaviour
     public Mesh cube;
     public Mesh sphere;
     public Mesh capsule;
-    public Mesh ico;
+
 
 
     public float changeLaneSpeed = 10f;
@@ -22,12 +25,14 @@ public class PlayerControllerTest : MonoBehaviour
     private Vector3 velocity;
     private MeshFilter currentShape;
     private Vector3 currentPos;
+    
 
     private void Start()
     {
         myCharacterController = GetComponent<CharacterController>();
 
         currentShape = GetComponent<MeshFilter>();
+
 
         
     }
@@ -108,7 +113,7 @@ public class PlayerControllerTest : MonoBehaviour
             vectortest = new Vector3(transform.position.x, 1.5f, transform.position.z);
             Instantiate(capsule, vectortest, Quaternion.identity);
             Destroy(this.gameObject);*/
-            GetComponent<MeshFilter>().mesh = ico;
+
 
         }
     }
@@ -122,7 +127,7 @@ public class PlayerControllerTest : MonoBehaviour
 
         } else
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 
