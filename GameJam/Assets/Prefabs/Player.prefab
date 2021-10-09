@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e238d578dddd2af42a624e9ce93f8bd4, type: 2}
+  - {fileID: 2100000, guid: 3fcb9d97bc874f04b98844a9e2b8f2d1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,7 +112,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 114
+  m_Constraints: 118
   m_CollisionDetection: 0
 --- !u!114 &2107863455913177659
 MonoBehaviour:
@@ -126,10 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d758650db408a469282e0e263ee891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 2107863455913177661}
-  sphere: {fileID: 774408928912074916, guid: 08e0d0ecb4c57c14491424d121a34e5a, type: 3}
-  capsule: {fileID: 3490379060400143295, guid: 9cdfc871de335f54698ebefe82602a6c, type: 3}
-  changeLaneSpeed: 15
+  scoreScript: {fileID: 0}
+  cube: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  sphere: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  capsule: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  changeLaneSpeed: 20
   laneWidth: 2
 --- !u!143 &2107863455913177637
 CharacterController:
