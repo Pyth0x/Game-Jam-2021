@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControllerTest : MonoBehaviour
 {
+
     public float changeLaneSpeed = 10f;
     public float laneWidth = 1.5f;
     private int lane = 0;
@@ -53,5 +54,10 @@ public class PlayerControllerTest : MonoBehaviour
         moveAmount.x = deltaX;
 
         myCharacterController.Move(moveAmount);
+    }
+
+    void changeShape(int shape)
+    {
+        
     }
 }
