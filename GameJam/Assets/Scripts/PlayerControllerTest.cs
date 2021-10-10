@@ -4,16 +4,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.ProBuilder.MeshOperations;
 using UnityEngine.ProBuilder;
+using UnityEngine.Rendering.PostProcessing;
 
 
 public class PlayerControllerTest : MonoBehaviour
 {
+
+    ColorParameter cp;
     Vector3 vectortest;
 
     public ScoreScript scoreScript;
     public Mesh cube;
     public Mesh sphere;
     public Mesh capsule;
+
+    public Material cubeMat;
+    public Material sphereMat;
+    public Material capsuleMat;
+
+    //public GameObject ppobject;
+    public PostProcessVolume pp;
 
 
 
@@ -23,18 +33,11 @@ public class PlayerControllerTest : MonoBehaviour
 
     private CharacterController myCharacterController;
     private Vector3 velocity;
-    private MeshFilter currentShape;
-    private Vector3 currentPos;
-    
 
     private void Start()
     {
         myCharacterController = GetComponent<CharacterController>();
 
-        currentShape = GetComponent<MeshFilter>();
-
-
-        
     }
 
     private void Update()
@@ -86,6 +89,7 @@ public class PlayerControllerTest : MonoBehaviour
             Destroy(this.gameObject);
             Instantiate(cube,vectortest, Quaternion.identity);*/
             GetComponent<MeshFilter>().mesh = cube;
+            GetComponent<MeshRenderer>().material = cubeMat;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -95,6 +99,7 @@ public class PlayerControllerTest : MonoBehaviour
             Destroy(this.gameObject);
             Instantiate(sphere,vectortest , Quaternion.identity);*/
             GetComponent<MeshFilter>().mesh = sphere;
+            GetComponent<MeshRenderer>().material = sphereMat;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -104,16 +109,7 @@ public class PlayerControllerTest : MonoBehaviour
             Instantiate(capsule, vectortest, Quaternion.identity);
             Destroy(this.gameObject);*/
             GetComponent<MeshFilter>().mesh = capsule;
-
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            /*
-            vectortest = new Vector3(transform.position.x, 1.5f, transform.position.z);
-            Instantiate(capsule, vectortest, Quaternion.identity);
-            Destroy(this.gameObject);*/
-
+            GetComponent<MeshRenderer>().material = capsuleMat;
 
         }
     }
