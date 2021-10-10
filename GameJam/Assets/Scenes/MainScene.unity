@@ -415,6 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1642b0fce629f5e459814040820d6369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24300002, guid: 7e90757648c2c2746b30394347e57481, type: 2}
   sounds:
   - name: DarknessImpact 4-Audio
     clip: {fileID: 8300000, guid: d34b94cf2983ad04db1185dbb59f6f79, type: 3}
