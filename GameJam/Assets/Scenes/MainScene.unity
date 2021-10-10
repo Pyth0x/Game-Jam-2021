@@ -418,26 +418,26 @@ MonoBehaviour:
   sounds:
   - name: DarknessImpact 4-Audio
     clip: {fileID: 8300000, guid: d34b94cf2983ad04db1185dbb59f6f79, type: 3}
-    volume: 1
+    volume: 0.15
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: DarknessImpact 10-Audio
     clip: {fileID: 8300000, guid: 49255f5db45eab8429f5bf9f0a982d4c, type: 3}
-    volume: 0.485
+    volume: 0.15
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: DarknessImpact 20-Audio
     clip: {fileID: 8300000, guid: 15a381a0f48b1774b8179a12f61c759c, type: 3}
-    volume: 0.485
+    volume: 0.15
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: blastoyz-ranji-zoom-original-mix
-    clip: {fileID: 8300000, guid: c8e79ce1fefc77045be4351561558d04, type: 3}
-    volume: 0.485
-    pitch: 0.5
+  - name: mainMusic
+    clip: {fileID: 8300000, guid: dd50ec0d114923f4fa3744a2e37cadfb, type: 3}
+    volume: 0.569
+    pitch: 0.98
     loop: 1
     source: {fileID: 0}
   - name: il-vento-doro-golden-wind-remix

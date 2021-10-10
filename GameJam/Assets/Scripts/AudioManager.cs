@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("blastoyz-ranji-zoom-original-mix");
+        Play("mainMusic");
     }
 
     public void Play(string name)

@@ -31,9 +31,6 @@ public class PlayerControllerTest : MonoBehaviour
     private CharacterController myCharacterController;
     private Vector3 velocity;
 
-    private void Awake()
-    {
-    }
 
     private void Start()
     {
@@ -125,7 +122,7 @@ public class PlayerControllerTest : MonoBehaviour
             if (other.gameObject.tag == "enemyCap")
                 AudioManager.instance.Play("DarknessImpact 4-Audio");
             if (other.gameObject.tag == "enemyCub")
-                AudioManager.instance.Play("DarknessImpact 10-Audio");
+                AudioManager.instance.Play("DarknessImpact 10-Audio"); 
             if (other.gameObject.tag == "enemySph")
                 AudioManager.instance.Play("DarknessImpact 20-Audio");
             
