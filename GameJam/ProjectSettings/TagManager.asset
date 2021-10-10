@@ -8,6 +8,7 @@ TagManager:
   - enemyCap
   - enemyCub
   - enemySph
+  - par
   layers:
   - Default
   - TransparentFX

@@ -1707,6 +1707,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2107863455913177638, guid: 089d7b46718f049489586009e096eb28, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2107863455913177639, guid: 089d7b46718f049489586009e096eb28, type: 3}
       propertyPath: m_ReceiveShadows
       value: 1
@@ -1793,6 +1797,10 @@ PrefabInstance:
       objectReference: {fileID: 241694250}
     - target: {fileID: 2107863455913177661, guid: 089d7b46718f049489586009e096eb28, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107863455913177661, guid: 089d7b46718f049489586009e096eb28, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2107863455913177661, guid: 089d7b46718f049489586009e096eb28, type: 3}

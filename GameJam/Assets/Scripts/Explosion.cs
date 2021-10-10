@@ -2,32 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyController : MonoBehaviour
+public class Explosion : MonoBehaviour
 {
-    Rigidbody rb;
-    public float speed = 5f;
-    // Start is called before the first frame update
-
-    private void FixedUpdate()
-    {
-        rb.velocity = new Vector3(0, 0, -speed);
-    }
 
     public float cubeSize = 0.2f;
-    public int cubesInRow;
+    public int cubesInRow = 2;
 
     float cubesPivotDistance;
     Vector3 cubesPivot;
 
-    public float explosionForce = 0f;
+    public float explosionForce = 50f;
     public float explosionRadius = 1f;
     public float explosionUpward = 0.2f;
 
-    // Use this for initialization
     void Start()
     {
-        cubesInRow = 3;
-        rb = GetComponent<Rigidbody>();
+
         //calculate pivot distance
         cubesPivotDistance = cubeSize * cubesInRow / 2;
         //use this value to create pivot vector)
@@ -35,11 +25,6 @@ public class enemyController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnTriggerEnter(Collider other)
     {
