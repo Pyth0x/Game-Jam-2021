@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class enemyController : MonoBehaviour
 {
+    Material mat;
     Rigidbody rb;
     public float speed = 5f;
     // Start is called before the first frame update
@@ -45,6 +46,7 @@ public class enemyController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            mat = other.gameObject.GetComponent<MeshRenderer>().material;
             explode();
         }
 
@@ -94,6 +96,7 @@ public class enemyController : MonoBehaviour
         piece.transform.position = transform.position + new Vector3(cubeSize * x, cubeSize * y, cubeSize * z) - cubesPivot;
         piece.transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);
 
+        piece.gameObject.GetComponent<MeshRenderer>().material = mat;
 
         //add rigidbody and set mass
         piece.AddComponent<Rigidbody>();
