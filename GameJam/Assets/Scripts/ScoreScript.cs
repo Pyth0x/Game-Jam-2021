@@ -9,6 +9,8 @@ public class ScoreScript : MonoBehaviour
     public TextMeshProUGUI highScoretext;
     public static int score;
     public static int highscore;
+    private float deltaTime;
+
 
     void Start()
     {

@@ -24,6 +24,7 @@ public class PlayerControllerTest : MonoBehaviour
 
 
 
+
     public float changeLaneSpeed = 10f;
     public float laneWidth = 1.5f;
     private int lane = 0;
@@ -82,30 +83,18 @@ public class PlayerControllerTest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            /*
-            vectortest = new Vector3(transform.position.x, 1, transform.position.z);
-            Destroy(this.gameObject);
-            Instantiate(cube,vectortest, Quaternion.identity);*/
             GetComponent<MeshFilter>().mesh = cube;
             GetComponent<MeshRenderer>().material = cubeMat;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            /*
-            vectortest = new Vector3(transform.position.x, 1, transform.position.z);
-            Destroy(this.gameObject);
-            Instantiate(sphere,vectortest , Quaternion.identity);*/
             GetComponent<MeshFilter>().mesh = sphere;
             GetComponent<MeshRenderer>().material = sphereMat;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            /*
-            vectortest = new Vector3(transform.position.x, 1.5f, transform.position.z);
-            Instantiate(capsule, vectortest, Quaternion.identity);
-            Destroy(this.gameObject);*/
             GetComponent<MeshFilter>().mesh = capsule;
             GetComponent<MeshRenderer>().material = capsuleMat;
 
@@ -114,17 +103,28 @@ public class PlayerControllerTest : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(GetComponent<MeshFilter>().mesh.name == other.GetComponent<MeshFilter>().mesh.name)
+
+        if (GetComponent<MeshFilter>().mesh.name == other.GetComponent<MeshFilter>().mesh.name)
         {
             scoreScript.UpdateScore();
             Destroy(other.gameObject);
 
+
             if (other.gameObject.tag == "enemyCap")
+            {
                 AudioManager.instance.Play("DarknessImpact 4-Audio");
+            }
+                
             if (other.gameObject.tag == "enemyCub")
-                AudioManager.instance.Play("DarknessImpact 10-Audio"); 
+            {
+                AudioManager.instance.Play("DarknessImpact 10-Audio");
+            }
+                
             if (other.gameObject.tag == "enemySph")
+            {
                 AudioManager.instance.Play("DarknessImpact 20-Audio");
+            }
+                
             
         } else
         {
