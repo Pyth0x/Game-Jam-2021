@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -415,7 +415,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1642b0fce629f5e459814040820d6369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: DarknessImpact 4-Audio
+    clip: {fileID: 8300000, guid: d34b94cf2983ad04db1185dbb59f6f79, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DarknessImpact 10-Audio
+    clip: {fileID: 8300000, guid: 49255f5db45eab8429f5bf9f0a982d4c, type: 3}
+    volume: 0.485
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DarknessImpact 20-Audio
+    clip: {fileID: 8300000, guid: 15a381a0f48b1774b8179a12f61c759c, type: 3}
+    volume: 0.485
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: blastoyz-ranji-zoom-original-mix
+    clip: {fileID: 8300000, guid: c8e79ce1fefc77045be4351561558d04, type: 3}
+    volume: 0.485
+    pitch: 0.5
+    loop: 1
+    source: {fileID: 0}
+  - name: il-vento-doro-golden-wind-remix
+    clip: {fileID: 8300000, guid: caebb8de1fb4a0c41ad74abe2fbd9e50, type: 3}
+    volume: 0.485
+    pitch: 1.15
+    loop: 1
+    source: {fileID: 0}
 --- !u!4 &241694251
 Transform:
   m_ObjectHideFlags: 0
@@ -1757,6 +1787,10 @@ PrefabInstance:
       propertyPath: scoreScript
       value: 
       objectReference: {fileID: 229541504}
+    - target: {fileID: 2107863455913177659, guid: 089d7b46718f049489586009e096eb28, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 241694250}
     - target: {fileID: 2107863455913177661, guid: 089d7b46718f049489586009e096eb28, type: 3}
       propertyPath: m_Name
       value: Player

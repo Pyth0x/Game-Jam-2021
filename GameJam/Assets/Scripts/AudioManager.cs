@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
 
         if (instance == null)
             instance = this;
@@ -30,6 +31,11 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+    }
+
+    private void Start()
+    {
+        Play("blastoyz-ranji-zoom-original-mix");
     }
 
     public void Play(string name)
