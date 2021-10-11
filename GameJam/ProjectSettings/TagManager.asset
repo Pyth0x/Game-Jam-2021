@@ -10,6 +10,7 @@ TagManager:
   - enemySph
   - par
   - ring
+  - die
   layers:
   - Default
   - TransparentFX

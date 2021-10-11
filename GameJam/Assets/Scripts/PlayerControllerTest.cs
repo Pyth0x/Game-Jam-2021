@@ -103,7 +103,6 @@ public class PlayerControllerTest : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
         if (GetComponent<MeshFilter>().mesh.name == other.GetComponent<MeshFilter>().mesh.name)
         {
             scoreScript.UpdateScore();
@@ -128,7 +127,10 @@ public class PlayerControllerTest : MonoBehaviour
             
         } else
         {
-            SceneManager.LoadScene(1);
+            if(other.gameObject.tag != "ring")
+            {
+                SceneManager.LoadScene(1);
+            }
             AudioManager audioManager = FindObjectOfType<AudioManager>();
 
         }
