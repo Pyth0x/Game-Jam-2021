@@ -18,7 +18,7 @@ public class DeadZoneScript : MonoBehaviour
         if (other.gameObject.tag == "enemyCub" || other.gameObject.tag == "enemySph" || other.gameObject.tag == "enemyCap")
         {
             Destroy(other.gameObject);
-            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(1);
         }
     }
 }

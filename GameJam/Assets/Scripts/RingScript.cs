@@ -38,16 +38,9 @@ public class RingScript : MonoBehaviour
         }
 
         transform.position += new Vector3(0, 0, -speed * Time.deltaTime);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.gameObject.name);
-        
-        if (other.gameObject.tag == "die")  
+        if(transform.position.z <= -11f)
         {
-            Debug.Log("çarptý");
-            transform.position = new Vector3(transform.position.x, transform.position.y, 56f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 53f);
         }
     }
 }

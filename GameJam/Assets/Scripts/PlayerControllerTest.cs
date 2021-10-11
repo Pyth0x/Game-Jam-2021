@@ -129,7 +129,7 @@ public class PlayerControllerTest : MonoBehaviour
         {
             if(other.gameObject.tag != "ring")
             {
-                SceneManager.LoadScene(1);
+                //SceneManager.LoadScene(1);
             }
             AudioManager audioManager = FindObjectOfType<AudioManager>();
 
