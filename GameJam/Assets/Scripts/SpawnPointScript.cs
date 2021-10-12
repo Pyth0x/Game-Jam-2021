@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//140 bpm
 [System.Serializable]
 public class Enemy{
 
