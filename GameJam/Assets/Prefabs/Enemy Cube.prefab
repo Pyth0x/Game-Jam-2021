@@ -110,6 +110,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
+  cubeSize: 0.2
+  cubesInRow: 5
+  explosionForce: 40
+  explosionRadius: 1
+  explosionUpward: 0.2
 --- !u!54 &-7393619908299204664
 Rigidbody:
   m_ObjectHideFlags: 0

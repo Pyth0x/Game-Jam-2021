@@ -46,7 +46,7 @@ public class enemyController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            mat = other.gameObject.GetComponent<MeshRenderer>().material;
+            mat = gameObject.GetComponent<MeshRenderer>().material;
             explode();
         }
 
