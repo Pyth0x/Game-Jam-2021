@@ -59,7 +59,7 @@ public class SpawnPointScript : MonoBehaviour
     {
         double r = rand.NextDouble() * accumulatedWeights;
 
-        for (int i = 0; i < enemies.Length; i++)
+        for (int i = 0; i < enemies.Length-1; i++)
             if (enemies[i]._weight >= r)
                 return i;
 

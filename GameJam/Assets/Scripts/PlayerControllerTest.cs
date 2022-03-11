@@ -23,8 +23,6 @@ public class PlayerControllerTest : MonoBehaviour
     public PostProcessVolume pp;
 
 
-
-
     public float changeLaneSpeed = 10f;
     public float laneWidth = 1.5f;
     private int lane = 0;
@@ -107,7 +105,7 @@ public class PlayerControllerTest : MonoBehaviour
         {
             scoreScript.UpdateScore();
             Destroy(other.gameObject);
-
+            
 
             if (other.gameObject.tag == "enemyCap")
             {
