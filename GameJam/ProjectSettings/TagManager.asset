@@ -11,6 +11,9 @@ TagManager:
   - par
   - ring
   - die
+  - car
+  - icecream
+  - ambulance
   layers:
   - Default
   - TransparentFX
